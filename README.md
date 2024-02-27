@@ -15,6 +15,8 @@
 1. Node.js (https://nodejs.org)
 2. Composer https://getcomposer.org/
 3. Локальный веб-сервер Open-server, Xampp и тд.
+4. PHP 7.4
+5. MariaDB 10.4
 
 # Установка проекта на локальном диске
 
