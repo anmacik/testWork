@@ -19752,7 +19752,7 @@ var _hoisted_5 = {
   "class": "overflow-x-auto"
 };
 var _hoisted_6 = {
-  "class": "table-auto w-full border-collapse border-2"
+  "class": "table-auto w-full border-collapse"
 };
 var _hoisted_7 = {
   key: 0,
@@ -20105,6 +20105,7 @@ var _hoisted_11 = {
   "class": "border-2 font-normal border-sky-500 p-1"
 };
 var _hoisted_12 = {
+  key: 3,
   "class": "items-center border-2 font-normal border-sky-500 p-1"
 };
 var _hoisted_13 = {
@@ -20112,10 +20113,23 @@ var _hoisted_13 = {
 };
 var _hoisted_14 = ["min"];
 var _hoisted_15 = {
-  "class": "border-2 font-normal border-sky-500 p-1"
+  key: 4,
+  "class": "items-center border-2 font-normal border-sky-500 p-1"
 };
 var _hoisted_16 = {
-  key: 4,
+  "class": "h-16 flex flex-row gap-1 justify-around items-center"
+};
+var _hoisted_17 = {
+  "class": "w-6 border-0"
+};
+var _hoisted_18 = {
+  "class": "w-6 border-0"
+};
+var _hoisted_19 = {
+  "class": "border-2 font-normal border-sky-500 p-1"
+};
+var _hoisted_20 = {
+  key: 6,
   "class": "text-center bg-gray-200 rounded-xl cursor-not-allowed p-2 bg-clip-content"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -20154,7 +20168,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[6] || (_cache[6] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return _ctx.$emit('showModal', $setup.props.client.list_full_remmitances);
     }, ["prevent", "stop"]))
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.props.client.program_price) + "/" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.props.client.all_payments), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.props.client.program_price) + "/" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.props.client.all_payments), 1 /* TEXT */), $setup.props.role == 'Lawyer' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
       return $setup.data.first_date = $event;
     }),
@@ -20174,11 +20188,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "number",
     min: $setup.props.client.program_first_date,
     "class": "w-6 border-0"
-  }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_14), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.data.second_date]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.props.client.client_handover_date), 1 /* TEXT */), $setup.changed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
-    key: 3,
+  }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_14), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.data.second_date]])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.data.first_date), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.data.second_date), 1 /* TEXT */)])])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.props.client.client_handover_date), 1 /* TEXT */), $setup.changed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
+    key: 5,
     onClick: $setup.updateData,
     "class": "rounded-xl text-center p-2 bg-clip-content cursor-pointer bg-sky-500 text-white"
-  }, "Обновить")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", _hoisted_16, "Обновить"))]);
+  }, "Обновить")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", _hoisted_20, "Обновить"))]);
 }
 
 /***/ }),

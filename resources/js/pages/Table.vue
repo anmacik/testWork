@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="overflow-x-auto">
-                <table class="table-auto w-full border-collapse border-2 ">
+                <table class="table-auto w-full border-collapse">
                     <thead>
                         <tr>
                             <th v-if="props.role == 'Lawyer'" class="border-2 bg-blue-50 font-medium w-max border-sky-500 p-1" >Офис и менеджер</th>

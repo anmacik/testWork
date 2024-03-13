@@ -20,10 +20,16 @@
         <td class="border-2 font-normal border-sky-500 p-1">{{props.client.program_plan}}/{{props.client.all_payments}} </td>
         <td class="border-2 font-normal border-sky-500 p-1">{{props.client.program_price}}/{{props.client.all_payments}} </td>
         <td class="border-2 font-normal border-sky-500 p-1" @click.prevent.stop="$emit('showModal',props.client.list_full_remmitances)">{{props.client.program_price}}/{{props.client.all_payments}}</td>
-        <td class="items-center border-2 font-normal border-sky-500 p-1">
+        <td v-if="props.role=='Lawyer'" class="items-center border-2 font-normal border-sky-500 p-1">
             <div class="h-16 flex flex-row gap-1 justify-around">
                 <input v-model="data.first_date" @input="changed=true" type="number" min="1" class="w-6 border-0"  /> 
                 <input v-model="data.second_date" @input="changed=true" type="number" :min="props.client.program_first_date" class="w-6 border-0" /> 
+            </div>
+        </td>
+        <td v-else class="items-center border-2 font-normal border-sky-500 p-1">
+            <div class="h-16 flex flex-row gap-1 justify-around items-center">
+                <div class="w-6 border-0">{{data.first_date}}</div> 
+                <div class="w-6 border-0">{{data.second_date}}</div> 
             </div>
         </td>
         <td class="border-2 font-normal border-sky-500 p-1">{{props.client.client_handover_date}} </td>
