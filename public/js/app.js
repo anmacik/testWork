@@ -19319,13 +19319,32 @@ __webpack_require__.r(__webpack_exports__);
       email: null,
       password: null
     });
+    var redBorder = (0,vue__WEBPACK_IMPORTED_MODULE_1__.reactive)({
+      email: false,
+      password: false
+    });
+    var loginError = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)(false);
     function submit() {
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post('/login', form);
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post('/login', form, {
+        onError: function onError(err) {
+          console.log('err', err);
+        },
+        onSuccess: function onSuccess(result) {
+          if (result.component == "Auth") {
+            redBorder.email = true;
+            redBorder.password = true;
+            loginError.value = true;
+          }
+        }
+      });
     }
     var __returned__ = {
       form: form,
+      redBorder: redBorder,
+      loginError: loginError,
       submit: submit,
       Inertia: _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia,
+      ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
       reactive: vue__WEBPACK_IMPORTED_MODULE_1__.reactive
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -19699,6 +19718,10 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "form h-60 w-72 flex flex-col justify-center border-2 items-center gap-4 rounded-lg"
 };
+var _hoisted_3 = {
+  key: 0,
+  "class": "text-red text-sm"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
@@ -19706,15 +19729,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     type: "text",
     placeholder: "name",
-    "class": "w-52 h-8 p-1"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.email]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["w-52 h-8 p-1 focus-visible:outline-2 focus-visible:!outline-sky-500", {
+      'border-2 rounded-lg outline-red-200': $setup.redBorder.email
+    }]),
+    onFocus: _cache[1] || (_cache[1] = function ($event) {
+      return $setup.redBorder.email = false;
+    })
+  }, null, 34 /* CLASS, HYDRATE_EVENTS */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.email]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $setup.form.password = $event;
     }),
     type: "password",
     placeholder: "password",
-    "class": "w-52 h-8 p-1"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["w-52 h-8 p-1 focus-visible:outline-2 focus-visible:!outline-sky-500", {
+      'border-2 rounded-r-lg outline-red-200': $setup.redBorder.password
+    }]),
+    onFocus: _cache[3] || (_cache[3] = function ($event) {
+      return $setup.redBorder.password = false;
+    })
+  }, null, 34 /* CLASS, HYDRATE_EVENTS */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.password]]), $setup.loginError ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, " Не правильный логин/пароль")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: $setup.submit,
     "class": "w-52 h-8 bg-sky-500 hover:bg-sky-700 active:bg-sky-900 rounded-lg text-white"
   }, "Submit")])]);

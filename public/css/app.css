@@ -550,6 +550,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
 .border-2 {
   border-width: 2px;
 }
@@ -566,6 +570,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-slate-200 {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+.border-red-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 202 202 / var(--tw-border-opacity));
+}
+.\!border-red-200 {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(254 202 202 / var(--tw-border-opacity)) !important;
 }
 .bg-gray-800 {
   --tw-bg-opacity: 1;
@@ -615,6 +627,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -634,6 +654,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.outline-red-200 {
+  outline-color: #fecaca;
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -655,6 +678,44 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-blue-200:hover {
   --tw-text-opacity: 1;
   color: rgb(191 219 254 / var(--tw-text-opacity));
+}
+.focus\:border-2:focus {
+  border-width: 2px;
+}
+.focus\:border-sky-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.focus-visible\:border-2:focus-visible {
+  border-width: 2px;
+}
+.focus-visible\:\!border-2:focus-visible {
+  border-width: 2px !important;
+}
+.focus-visible\:border-sky-500:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.focus-visible\:\!border-sky-500:focus-visible {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity)) !important;
+}
+.focus-visible\:bg-red-100:focus-visible {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+.focus-visible\:outline-2:focus-visible {
+  outline-width: 2px;
+}
+.focus-visible\:\!outline-sky-500:focus-visible {
+  outline-color: #0ea5e9 !important;
+}
+.active\:border-2:active {
+  border-width: 2px;
+}
+.active\:border-sky-500:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity));
 }
 .active\:bg-sky-900:active {
   --tw-bg-opacity: 1;
